@@ -32,6 +32,7 @@ test:
 
 production:
   <<: *default
+  adapter: postgresql
   database: nlp_web
   encoding: utf8
   username: client
