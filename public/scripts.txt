@@ -1,0 +1,19 @@
+c = Category.new(:name=>'News')
+
+c = Category.create(:name=>'Life')
+
+post = Post.new(:title=>"Big", :body=>"a mistake has been made", :category_id=>1)
+post = Post.new(:title=>"Work", :body=>"i am working hard on ror", :category_id=>2)
+post = Post.new(:title=>"Funny", :body=>"this is a joke", :category_id=>3)
+
+post = MyPost.new()
+
+post.title="Big"
+
+post = Post.new(:title=>"Work")
+
+rails g model post title:string body:text category_id:integer author_id:integer
+
+rails destroy model post
+
+post.save(validate: false)

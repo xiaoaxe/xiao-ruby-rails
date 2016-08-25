@@ -1,2 +1,22 @@
 <h1>Edit Post</h1>
+<%= form_for @post do |f| %>
+    <p>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :body %>
+      <%= f.text_area :body %>
+    </p>
+
+    <p>
+      <%= f.select :categories_id, Category.all.collect {|x| [x.name, x.id]}, {:include_blank => 'Select One'}  %><br />
+    </p>
+
+    <p>
+      <%= f.submit 'Update Post' %>
+    </p>
+
+<%= end %>
+<%= link_to 'Go Back',post_path %>
 
