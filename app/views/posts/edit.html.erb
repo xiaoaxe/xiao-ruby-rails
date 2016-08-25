@@ -10,13 +10,13 @@
     </p>
 
     <p>
-      <%= f.select :categories_id, Category.all.collect {|x| [x.name, x.id]}, {:include_blank => 'Select One'}  %><br />
+      <%= f.select :category_id, Category.all.collect { |x| [x.name, x.id] }, {:include_blank => 'Select One'} %><br/>
     </p>
 
     <p>
       <%= f.submit 'Update Post' %>
     </p>
 
-<%= end %>
-<%= link_to 'Go Back',post_path %>
+<% end %>
+<%= link_to 'Go Back', post_path %>
 

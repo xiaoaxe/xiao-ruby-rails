@@ -1,7 +1,5 @@
 class PostsController < ApplicationController
   def index
-    # @first_content = 'This is some sample text for our awesome new Ruby blog'
-    # @second_content = 'This is more sample text for our awesome new Ruby blog'
     @posts = Post.all
   end
 
@@ -27,7 +25,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
 
-    if @post.update_attributes(params[:post])
+    if @post.update_attributes(post_params)
       redirect_to post_path, :notice => 'Your post has been updated'
     else
       render edit
