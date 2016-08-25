@@ -1,0 +1,1 @@
+puts 'h'.instance_variables

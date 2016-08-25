@@ -12,4 +12,11 @@ module XiaoRubyRails
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
   end
+
+  XiaoRubyRails::Application.configure do
+  config.time_zone='Beijing'
+  config.active_record.default_timezone=:local
+  config.active_record.time_zone_aware_attributes=false
+end
+
 end
