@@ -3,7 +3,7 @@
 <small><%= @post.created_at.to_s(:rfc822) %></small>
 <p><%= @post.body %></p>
 <p>Category: <%= link_to @post.category.name, category_path(:id => @post.category.id) %></p>
-<p><%= link_to 'Back', post_path %></p>
+<p><%= link_to 'Back', posts_path %></p>
 
 <p>
 <% if false %>

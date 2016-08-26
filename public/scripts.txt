@@ -17,3 +17,18 @@ rails g model post title:string body:text category_id:integer author_id:integer
 rails destroy model post
 
 post.save(validate: false)
+
+rails generate scaffold User name:string
+
+rails g Category name:string
+
+SSL_CERT_FILE D:/win/developer/cacert.pem
+
+gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
+
+bundle config mirror.https://rubygems.org https://ruby.taobao.org
+
+gem uninstall bcrypt
+gem install bcrypt --platform=ruby
+
+AdminUser.create :email => 'abc1@example.com', :password => 'password', :password_confirmation => 'password'

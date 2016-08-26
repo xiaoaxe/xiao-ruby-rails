@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'devise', :github => 'plataformatec/devise', :branch => 'master'
+# gem 'sass-rails'
+# gem 'meta_search', '>= 1.1.0.pre'
+gem 'bcrypt', '~> 3.1.9'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
