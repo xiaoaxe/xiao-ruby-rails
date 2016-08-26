@@ -4,14 +4,14 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = Post.new()
     @category=Category.all
   end
 
   def create
     @post = Post.new(post_params)
     if @post.save
-      flash[:success]='Your post is saved!'
+      flash[:success] = 'Your post has been saved!'
       redirect_to @post
     else
       render 'new'
