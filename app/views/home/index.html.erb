@@ -2,4 +2,10 @@
 <body>
 <h1>this is HOME page</h1>
 <p>i am wrote in Ruby</p>
+
+<% @posts.each do |post| %>
+    <p><%= post.title %></p>
+    <p><%= post.body %></p>
+    <hr>
+<% end %>
 </body>

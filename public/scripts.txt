@@ -32,3 +32,6 @@ gem uninstall bcrypt
 gem install bcrypt --platform=ruby
 
 AdminUser.create :email => 'abc1@example.com', :password => 'password', :password_confirmation => 'password'
+
+abc@example.com
+Tl****
