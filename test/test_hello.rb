@@ -1,1 +1,4 @@
-puts 'h'.instance_variables
+3.times do
+  puts :h
+end
+
