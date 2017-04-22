@@ -9,22 +9,65 @@
 </head>
 
 <div>
-  <ul class="main-nav">
-      <li><%= link_to 'Home', root_path %></li>
-      <li><%= link_to 'About', about_path %></li>
-      <li><%= link_to 'Blog', posts_path %></li>
-      <li><%= link_to 'Contact', contact_path %></li>
-      <li><%= link_to 'Resources', resources_path %></li>
-    </ul>
-  </div>
+  <ul class="main-nav" id="'menu">
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'About', about_path %></li>
+    <li><%= link_to 'Blog', posts_path %></li>
+    <li><%= link_to 'Contact', contact_path %></li>
+    <li><%= link_to 'Resources', resources_path %></li>
+  </ul>
+</div>
 
 <body>
 <% if false %>
-<%= flash.each do |key, value| %>
-    <p> <%= value %> </p>
-<% end %>
+    <%= flash.each do |key, value| %>
+        <p> <%= value %> </p>
+    <% end %>
 <% end %>
 
 <%= yield %>
 </body>
+
+<style type="text/css">
+  #menu {
+    font: 12px verdana, arial, sans-serif;
+  }
+
+  #menu, #menu li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #menu li {
+    float: left;
+  }
+
+  #menu li a {
+    display: block;
+    /* 如果是中英文混排的文字，建议用固定宽度
+    width:150px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    */
+    padding: 8px 50px;
+    background: #3A4953;
+    color: #fff;
+    text-decoration: none;
+    border-right: 1px solid #000;
+  }
+
+  #menu li a:hover {
+    background: #146C9C;
+    color: #fff;
+    text-decoration: none;
+    border-right: 1px solid #000;
+  }
+
+  #menu li a.last {
+    border-right: 0; /* 去掉左侧边框 */
+  }
+</style>
+
 </html>
